@@ -1,0 +1,41 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "vs2022-x64",
+      "displayName": "Visual Studio 2022 x64",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/vs2022-x64",
+      "cacheVariables": {
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install",
+        "LIBOBS_INCLUDE_DIR": "D:/obs-studio/libobs",
+        "LIBOBS_LIB": "D:/obs-studio/build_x64/libobs/RelWithDebInfo/obs.lib",
+        "OBS_FRONTEND_LIB": "D:/obs-studio/build_x64/frontend/api/RelWithDebInfo/obs-frontend-api.lib"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "vs2022-x64-release",
+      "configurePreset": "vs2022-x64",
+      "configuration": "Release",
+      "targets": [
+        "ALL_BUILD"
+      ]
+    },
+    {
+      "name": "vs2022-x64-install",
+      "configurePreset": "vs2022-x64",
+      "configuration": "Release",
+      "targets": [
+        "INSTALL"
+      ]
+    }
+  ]
+}
