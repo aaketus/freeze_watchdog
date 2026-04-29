@@ -174,3 +174,8 @@ To build Freeze Watchdog from source, you need:
 - CMake
 - OBS Studio development package (libobs-dev or obs-studio-dev)
 - Qt development libraries
+
+
+## License
+This project is licensed under the GNU General Public License v2.0.
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
